@@ -12,7 +12,7 @@ variable "location" {
    validation {
 #     condition     = var.location == var.location ? 1 : 2
 #     condition     = var.location != "hi" ? false : "default-a"
-    condition     = var.location == "var.location "
+    condition     = var.location == "hi" ? false : true
     error_message = "Must be either `least-waste`, `most-pods`, `priority` or `random`."
   }
 }
