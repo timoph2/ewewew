@@ -2,17 +2,22 @@
 
 variable "name" {
   description = "The name of azure resource group"
-  default     = "jonnychipz-rg-var"
+  default     = "x" == "y" ? "t2.micro" : "t2.small"
+  # default     = "t2.micro"
 }
 
 variable "location" {
   description = "location here"
-  default     = "UK South"
+  default     = "UK south"
+  # default     = "var.location" == "hi" ? "false" : "true"
   
    validation {
 #     condition     = var.location == var.location ? 1 : 2
-#     condition     = var.location != "hi" ? false : "default-a"
     condition     = var.location == "hi" ? false : true
+    # contains( [var.location],var.location )
+
+    # condition     = var.location == "var.location"
+    # condition     = var.location == var.location
     error_message = "Must be either `least-waste`, `most-pods`, `priority` or `random`."
   }
 }

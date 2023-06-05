@@ -1,7 +1,7 @@
 
 module "myec2_name" {
   source = "./module/"
-  instance_type = "t2.micro"
+  instance_type = var.name
 }
  
 

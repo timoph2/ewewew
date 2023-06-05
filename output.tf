@@ -8,7 +8,7 @@ output "my_ec2_id_output" {
 }
 
 output "random_ouput" {
-  value = "nibba"
+  value = var.location
 }
 
 #data = ... to use output from output
